@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>Artean</title>
+        <title>RolePlayGame</title>
         <!-- Bootstrap Core CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     </head>
@@ -22,7 +22,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a  class="nav-link text-white" href="index.php">Inicio</a>
                     </li>
                 </ul>
@@ -30,7 +30,7 @@
         </nav>
         
         <div class="container-fluid" id="formInsert">
-    <form action="" class="mt-5" id="">
+    <form action="" class="mt-5" id="formCreature" method="post">
         <div class="container-fluid">
             <div class="mb-3 row">
                 <label for="name" class="col-sm-2 col-form-label">
@@ -66,18 +66,18 @@
             </div>
             <div class="mb-3 row">
                 <label for="lifeLevel" class="col-sm-2 col-form-label">
-                    Attack Power
+                    Life level
                 </label>
                 <div class="col-10">
-                    <input type="text" class="form-control" id="lifeLevel" name="lifeLevel" placeholder="lifeLevel">Life Level</input>
+                    <input type="text" class="form-control" id="lifeLevel" name="lifeLevel" placeholder="Life Level"></input>
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="weapon" class="col-sm-2 col-form-label">
-                    Attack Power
+                    Weapon
                 </label>
                 <div class="col-10">
-                    <input type="text" class="form-control" id="weapon" name="weapon" placeholder="Weapon">Weapon</input>
+                    <input type="text" class="form-control" id="weapon" name="weapon" placeholder="Weapon"></input>
                 </div>
             </div>
             <div class="mb-3 row">
