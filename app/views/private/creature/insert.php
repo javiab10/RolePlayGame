@@ -1,15 +1,4 @@
-<?php
-    //ACORDARME DE LAS RUTAS
-    require_once(dirname(__FILE__).'/../../../controllers/CreatureController.php');
-    $_creatureController = new CreatureController();
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if ($_POST["type"] == "create"){
-            $_creatureController->createAction();
-            echo "<p>Petidión hecha</p>";
-        }
-    }
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +33,7 @@
         
         <div class="container-fluid" id="formInsert">
     
-        <form action="" class="mt-5" id="formCreature" method="post" action="insert.php">
+        <form class="mt-5" id="formCreature" method="post" action="../../../controllers/CreatureController.php">
             <input type="hidden" id="type" name="type" value="create">
             <div class="container-fluid">
                 <div class="mb-3 row">

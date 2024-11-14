@@ -82,8 +82,16 @@ class Creature {
         $result .= '</div>';
         $result .= '<div class="card-footer bg-white d-flex justify-content-around mt-2">';
         $result .= '<button type="button" class="btn btn-secondary" id="masInfo" href="offer/detail.php?id=">Más info</button>';
-        $result .= '<button type="button" class="btn btn-success" id="modificar">Modificar</button>';
-        $result .= '<button type="button" class="btn btn-danger" id="eliminar">Eliminar</button>';
+        $result .= '<form action="../../views/private/creature/modificar.php" method="post">';
+        $result .= '<input type="hidden" name="type" value="modificar">';
+        $result .= '<input type="hidden" name="id" value="'.$this->getIdCreature().'">';
+        $result .= '<button type="submit" class="btn btn-success" name="modificar" id="boton_modificar">Modificar</button>';
+        $result .= '</form>';
+        $result .= '<form action="../../controllers/CreatureController.php" method="post">';
+        $result .= '<input type="hidden" name="type" value="borrar">';
+        $result .= '<input type="hidden" name="id" value="'.$this->getIdCreature().'">';
+        $result .= '<button type="submit" class="btn btn-danger" name="borrar" id="btn_borrar">Borrar</button>';
+        $result .= '</form>';
         $result .= '</div>';
         $result .= '</div>';
         $result .= '</div>';

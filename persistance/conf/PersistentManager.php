@@ -56,7 +56,7 @@ class PersistentManager{
 
     //Getters y Setters de los parámetros de configuración de BD.
     function get_hostBD() {
-        return $this->hostBd;
+        return $this->hostBD;
     }
 
     function get_usuarioBD() {
