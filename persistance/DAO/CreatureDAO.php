@@ -1,5 +1,8 @@
 <?php
 
+//dirname(__FILE__) Es el directorio del archivo actual
+require_once(dirname(__FILE__) . '\..\conf\PersistentManager.php');
+
 class CreatureDAO {
     //Se define una constante con el nombre de la tabla
     const CREATURE_TABLE = 'creature';
@@ -18,7 +21,7 @@ class CreatureDAO {
         $creatures = array();
         while ($creatureBD = mysqli_fetch_array($result)) {
 
-            $creature= new Offer();
+            $creature= new Creature();
             $creature->setIdCreature($creatureBD["idCreature"]);
             $creature->setName($creatureBD["name"]);
             $creature->setDescription($creatureBD["description"]);

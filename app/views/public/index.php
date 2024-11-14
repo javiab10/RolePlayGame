@@ -1,3 +1,11 @@
+<?php 
+    //ACORDARME DE LAS RUTAS
+    require_once(dirname(__FILE__) . '\..\..\controllers\CreatureController.php');
+    
+    $creatureController = new CreatureController;
+    $creatures = $creatureController->readAction();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item ">
-                        <a  class="nav-link text-white" href="insert.php">Crear una criatura</a>
+                        <a  class="nav-link text-white" href="../private/creature/insert.php">Crear una criatura</a>
                     </li>
                 </ul>
             </div>  
@@ -44,21 +52,12 @@
                 
                 <hr class="mb-5">
                 
-                <div class="row mb-5">
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <h3 class="card-title">Nombre de la Criatura</h3>
-                            <div class="row card-body">
-                                <div class="col-6"><img src="../../../assets/img/creatureSample.jpg" class="img-fluid"></div>
-                                <div class="col-6"><p class="card-text">Descripicón criatura de ejemplo</p>
-                            </div>
-                            <div class="card-footer bg-white d-flex justify-content-around mt-2">
-                                <button type="button" class="btn btn-secondary">Más info</button>
-                                <button type="button" class="btn btn-success">Modificar</button>
-                                <button type="button" class="btn btn-danger">Eliminar</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row mb-5">                    
+                    <?php
+                        for ($i = 0; $i<sizeof($creatures); $i++){
+                            echo $creatures[$i]->pintarCreatures();
+                        }
+                    ?>
                 </div>
             </div>
         </main>

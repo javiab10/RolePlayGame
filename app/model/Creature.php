@@ -70,6 +70,26 @@ class Creature {
     public function setWeapon($weapon): void {
         $this->weapon = $weapon;
     }
+    
+    function pintarCreatures(){
+        $result = '<div class="col-lg-4">';
+        $result .= '<div class="card">';
+        $result .= '<h3 class="card-title">'.$this->getName().'</h3>';
+        $result .= '<div class="row card-body">';
+        $result .= '<div class="col-6"><img src="'.$this->getAvatar().'" class="img-fluid"></div>';
+        $result .= '<div class="col-6"><p class="card-text">'.$this->getDescription().'</p>';
+        $result .= '</div>';
+        $result .= '</div>';
+        $result .= '<div class="card-footer bg-white d-flex justify-content-around mt-2">';
+        $result .= '<button type="button" class="btn btn-secondary" id="masInfo" href="offer/detail.php?id=">Más info</button>';
+        $result .= '<button type="button" class="btn btn-success" id="modificar">Modificar</button>';
+        $result .= '<button type="button" class="btn btn-danger" id="eliminar">Eliminar</button>';
+        $result .= '</div>';
+        $result .= '</div>';
+        $result .= '</div>';
+        
+        return $result;
+    }
 
 
 }
